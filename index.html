@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anupolu Varshini | Cybersecurity Engineer & AI Developer Portfolio</title>
+    <meta name="description" content="Portfolio of Anupolu Varshini, an aspiring Cybersecurity Engineer and AI Developer specializing in Digital Forensics, Malware Analysis, and Machine Learning.">
+    <meta name="keywords" content="Anupolu Varshini, Varshini Anupolu, Cybersecurity, Digital Forensics, Machine Learning, Malware Analysis, SOC, Splunk, YARA, Portfolio">
+    <meta name="author" content="Anupolu Varshini">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Anupolu Varshini | Cybersecurity & AI Portfolio">
+    <meta property="og:description" content="Computer Science student specializing in Cyber Security, Digital Forensics, and Machine Learning.">
+    
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&family=Inter:wght@300;400;500;600;700;800&family=Orbitron:wght@500;700;900&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Canvas Background for Particle/Grid Effect -->
+    <canvas id="cyberCanvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <span class="logo-icon"><i class="fas fa-terminal"></i></span>
+                <span class="logo-text">VARSHINI<span class="cyan-accent">.A</span></span>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#experience" class="nav-link">Experience</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <div class="status-pill">
+                    <span class="pulse-dot"></span>
+                    <span>Seeking Cybersecurity & AI Opportunities</span>
+                </div>
+                <h1 class="hero-title">
+                    Hello, I'm <br>
+                    <span class="name-gradient">Anupolu Varshini</span>
+                </h1>
+                <h2 class="hero-subtitle">
+                    I specialize in <span id="typed-text" class="typed-cursor-parent"></span><span class="typed-cursor">|</span>
+                </h2>
+                <p class="hero-description">
+                    Aspiring Cybersecurity Engineer passionate about building intelligent, secure, and innovative solutions to solve real-world security challenges. Currently pursuing B.Tech in CSE (Cyber Security) at Vignan's Institute.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary"><i class="fas fa-project-diagram"></i> View Projects</a>
+                    <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contact Me</a>
+                </div>
+                <div class="social-links-row">
+                    <a href="https://www.linkedin.com/in/varshini-anupolu/" target="_blank" class="social-icon-btn" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/AVarshini05" target="_blank" class="social-icon-btn" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://leetcode.com/u/Anupolu_Varshini/" target="_blank" class="social-icon-btn" title="LeetCode"><i class="fas fa-code"></i></a>
+                    <a href="mailto:varshiniaanupolu2005@gmail.com" class="social-icon-btn" title="Email"><i class="fas fa-paper-plane"></i></a>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <!-- Glowing Cyber Shield/Core HUD -->
+                <div class="hud-container">
+                    <div class="hud-circle ring-outer"></div>
+                    <div class="hud-circle ring-middle"></div>
+                    <div class="hud-circle ring-inner">
+                        <i class="fas fa-shield-halved core-icon"></i>
+                    </div>
+                    <!-- Stats Tags floating around -->
+                    <div class="hud-tag tag-top">
+                        <i class="fas fa-user-shield"></i> SOC Analyst
+                    </div>
+                    <div class="hud-tag tag-bottom-right">
+                        <i class="fas fa-brain"></i> AI Malware Agent
+                    </div>
+                    <div class="hud-tag tag-bottom-left">
+                        <i class="fas fa-search-plus"></i> Forensics
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span class="mouse">
+                <span class="wheel"></span>
+            </span>
+            <span class="text">Scroll Down</span>
+        </div>
+    </section>
+
+    <!-- About & Interactive Console Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2 class="section-title"><span class="number">01.</span> About Me</h2>
+            <div class="about-grid">
+                <div class="about-text-content">
+                    <p class="lead">
+                        I am an analytical and research-driven Computer Science major specializing in Cyber Security.
+                    </p>
+                    <p>
+                        Through academic excellence at Vignan's Institute, maintaining a <strong class="cyan-accent">CGPA of 9.56</strong>, I have grounded myself in core security concepts, malware reversing, and predictive machine learning architectures.
+                    </p>
+                    <p>
+                        My objective is to construct intelligent pipelines that defend enterprise architectures. I bridge the gap between traditional security operations (like log correlation in Splunk and threat matching in MITRE ATT&CK) and modern AI automation agents (like Gemini and CrewAI pipelines).
+                    </p>
+                    
+                    <div class="quick-facts">
+                        <h3>Quick Profile:</h3>
+                        <ul class="facts-list">
+                            <li><strong><i class="fas fa-map-marker-alt"></i> Location:</strong> Visakhapatnam, AP, India</li>
+                            <li><strong><i class="fas fa-envelope"></i> Email:</strong> varshiniaanupolu2005@gmail.com</li>
+                            <li><strong><i class="fas fa-phone-alt"></i> Contact:</strong> +91 9182424169</li>
+                            <li><strong><i class="fas fa-user-graduate"></i> Academic Level:</strong> B.Tech (CSE-Cyber Security)</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="terminal-container">
+                    <div class="terminal-header">
+                        <div class="terminal-buttons">
+                            <span class="t-btn close"></span>
+                            <span class="t-btn minimize"></span>
+                            <span class="t-btn expand"></span>
+                        </div>
+                        <div class="terminal-title">varshini@cyber-core:~</div>
+                        <div class="terminal-status">
+                            <span class="status-indicator online"></span>
+                            <span>SECURE_SESSION_ACTIVE</span>
+                        </div>
+                    </div>
+                    <div class="terminal-tabs">
+                        <button class="t-tab active" data-cmd="profile">profile.sh</button>
+                        <button class="t-tab" data-cmd="system">sysinfo.sh</button>
+                        <button class="t-tab" data-cmd="interests">interests.txt</button>
+                        <button class="t-tab" data-cmd="help">help.log</button>
+                    </div>
+                    <div class="terminal-body" id="terminalOutput">
+                        <div class="terminal-line"><span class="prompt">varshini@cyber-core:~$</span> <span class="command-run">./profile.sh</span></div>
+                        <div class="output-block">
+                            <p class="terminal-green">>>> INITIALIZING SECURITY ANALYST PROFILE...</p>
+                            <p><strong>Name:</strong> Anupolu Varshini</p>
+                            <p><strong>Primary Focus:</strong> Cybersecurity, SOC Operations, Malware analysis, Deep Learning</p>
+                            <p><strong>Experience:</strong> Former Digital Forensics Intern at Cyber Crime Police Station</p>
+                            <p><strong>Core Tech:</strong> Splunk SIEM, YARA rules, Python, React, Gemini AI, PostgreSQL</p>
+                            <p class="terminal-cyan">>>> SECURE INTERN CREDENTIALS VERIFIED.</p>
+                        </div>
+                        <div class="terminal-input-line">
+                            <span class="prompt">varshini@cyber-core:~$</span>
+                            <input type="text" id="terminalCommandLine" placeholder="Type help or click tabs above..." autocomplete="off">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Work Experience Section -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <h2 class="section-title"><span class="number">02.</span> Experience & Internships</h2>
+            <div class="experience-timeline">
+                
+                <!-- Experience Item 1 -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div class="exp-role">
+                            <h3>Digital Forensics Intern</h3>
+                            <span class="company">Cyber Crime Police Station</span>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="duration"><i class="far fa-calendar-alt"></i> Jan 2026 – Mar 2026</span>
+                            <span class="location"><i class="fas fa-map-marker-alt"></i> Yandada, Visakhapatnam</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <ul>
+                            <li>Analyzed cyber crime case files to understand threat vectors, attacker behaviors, and digital fraud patterns.</li>
+                            <li>Learned and used digital forensic tools like <strong>Autopsy</strong>, <strong>CDR Analyzer</strong>, and <strong>Falcon Imager</strong> for cyber investigation tasks.</li>
+                            <li>Studied real-world cybercrime investigations involving UPI and banking fraud, social media impersonation, financial fraud, phishing, SIM-swap fraud, WhatsApp investigations, and mobile device forensics, strengthening practical knowledge of evidence preservation and forensic workflows.</li>
+                        </ul>
+                        <div class="tag-row">
+                            <span class="tag tag-cyber">Autopsy</span>
+                            <span class="tag tag-cyber">CDR Analyzer</span>
+                            <span class="tag tag-cyber">Falcon Imager</span>
+                            <span class="tag tag-cyber">Evidence Preservation</span>
+                            <span class="tag tag-cyber">Cyber Crime Audits</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience Item 2 -->
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div class="exp-role">
+                            <h3>ML Intern</h3>
+                            <span class="company">InternPe</span>
+                        </div>
+                        <div class="exp-meta">
+                            <span class="duration"><i class="far fa-calendar-alt"></i> May 2025</span>
+                            <span class="location"><i class="fas fa-laptop"></i> Remote</span>
+                        </div>
+                    </div>
+                    <div class="exp-body">
+                        <ul>
+                            <li>Completed a comprehensive training program in Machine Learning, gaining hands-on experience with various ML algorithms, model training techniques, and performance evaluation metrics.</li>
+                            <li>Developed and evaluated multiple Machine Learning models for predictive analysis on <strong>5,000+ records</strong>, achieving up to <strong>90% accuracy</strong> through data preprocessing, feature engineering, and model optimization.</li>
+                        </ul>
+                        <div class="tag-row">
+                            <span class="tag tag-ml">Machine Learning</span>
+                            <span class="tag tag-ml">Python Scikit-Learn</span>
+                            <span class="tag tag-ml">Feature Engineering</span>
+                            <span class="tag tag-ml">Model Evaluation</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title"><span class="number">03.</span> Projects Showcase</h2>
+            <p class="section-desc">Selected academic and practical security/AI engineering projects. Click on cards to view detailed tech stacks.</p>
+            
+            <div class="projects-grid">
+                
+                <!-- Project 1: AI-Powered Malware Analysis -->
+                <div class="project-card" data-tech="Python, Streamlit, Splunk Enterprise, Androguard, JADX, YARA, VirusTotal API, MITRE ATT&CK, Gemini AI, SQLite">
+                    <div class="project-card-header">
+                        <div class="project-icon"><i class="fas fa-bug-slash"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/AVarshini05" target="_blank" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                            <span class="tech-info-btn" title="View Technologies"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">AI-Powered Android Malware Analysis & SOC Platform</h3>
+                        <p class="project-text">
+                            Developed an automated malware analysis engine to inspect Android APK files, extract IOCs, and identify malicious behaviors using static analysis and custom YARA rules.
+                        </p>
+                        <p class="project-text">
+                            Correlated logs through Splunk SIEM, mapped findings to MITRE ATT&CK techniques, and integrated Gemini AI to generate structured incident reports and mitigation guides.
+                        </p>
+                        <div class="project-tech-list">
+                            <span>Splunk SIEM</span>
+                            <span>YARA</span>
+                            <span>Gemini AI</span>
+                            <span>Androguard</span>
+                            <span>JADX</span>
+                            <span>MITRE ATT&CK</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: CyberSathi-AI -->
+                <div class="project-card" data-tech="Python, FastAPI, React, PostgreSQL, LLM APIs, Speech-to-Text (STT), Text-to-Speech (TTS)">
+                    <div class="project-card-header">
+                        <div class="project-icon"><i class="fas fa-shield-halved"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/AVarshini05" target="_blank" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                            <span class="tech-info-btn" title="View Technologies"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">CyberSathi-AI: AI-Powered Cyber Crime Reporting Portal</h3>
+                        <p class="project-text">
+                            Engineered an AI conversational agent assisting victims with multilingual voice and text support. Collects incident details, extracts evidence, and generates structured complaints.
+                        </p>
+                        <p class="project-text">
+                            Automated incident classification and preliminary threat assessment to assist investigators with structured, action-ready evidence files.
+                        </p>
+                        <div class="project-tech-list">
+                            <span>React</span>
+                            <span>FastAPI</span>
+                            <span>LLM APIs</span>
+                            <span>PostgreSQL</span>
+                            <span>STT & TTS</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Smart Report Analyzer -->
+                <div class="project-card" data-tech="Google GenerativeAI, BeautifulSoup, CrewAI, Python, Multi-Agent Orchestration">
+                    <div class="project-card-header">
+                        <div class="project-icon"><i class="fas fa-file-medical-alt"></i></div>
+                        <div class="project-links">
+                            <a href="https://github.com/AVarshini05" target="_blank" title="GitHub Repository"><i class="fab fa-github"></i></a>
+                            <span class="tech-info-btn" title="View Technologies"><i class="fas fa-info-circle"></i></span>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <h3 class="project-title">Smart Report Analyzer</h3>
+                        <p class="project-text">
+                            Created a multi-agent blood test report analysis pipeline utilizing CrewAI agents to parse, structure, and automate health risk evaluations.
+                        </p>
+                        <p class="project-text">
+                            Achieved 82% accuracy in risk identification, fetching recommendations from validated medical datasets and generating personalized summaries.
+                        </p>
+                        <div class="project-tech-list">
+                            <span>CrewAI</span>
+                            <span>Generative AI</span>
+                            <span>BeautifulSoup</span>
+                            <span>Python</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Inventory Dashboard (Refactored: COOL, NO SCORES, NO CLUMSY METERS) -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title"><span class="number">04.</span> Technical Inventory</h2>
+            <p class="section-desc">A specialized set of tools and technologies mapped across cybersecurity and intelligence domains. Hover on cards to highlight skills.</p>
+            
+            <div class="tech-matrix-grid">
+                
+                <!-- Category 1: Languages -->
+                <div class="tech-category-card">
+                    <div class="tech-cat-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="tech-pill-container">
+                        <span class="tech-pill">Python</span>
+                        <span class="tech-pill">Java</span>
+                        <span class="tech-pill">SQL</span>
+                        <span class="tech-pill">JavaScript</span>
+                        <span class="tech-pill">HTML & CSS</span>
+                    </div>
+                </div>
+
+                <!-- Category 2: Cybersecurity & Frameworks -->
+                <div class="tech-category-card">
+                    <div class="tech-cat-header">
+                        <i class="fas fa-shield-virus"></i>
+                        <h3>Cybersecurity</h3>
+                    </div>
+                    <div class="tech-pill-container">
+                        <span class="tech-pill">Splunk SIEM</span>
+                        <span class="tech-pill">YARA Rules</span>
+                        <span class="tech-pill">MITRE ATT&CK</span>
+                        <span class="tech-pill">Malware Analysis</span>
+                        <span class="tech-pill">Threat Intelligence</span>
+                        <span class="tech-pill">Incident Response</span>
+                        <span class="tech-pill">Digital Forensics</span>
+                    </div>
+                </div>
+
+                <!-- Category 3: Security & Forensic Tools -->
+                <div class="tech-category-card">
+                    <div class="tech-cat-header">
+                        <i class="fas fa-screwdriver-wrench"></i>
+                        <h3>Security & Analysis Tools</h3>
+                    </div>
+                    <div class="tech-pill-container">
+                        <span class="tech-pill">Autopsy</span>
+                        <span class="tech-pill">Falcon Imager</span>
+                        <span class="tech-pill">CDR Analyzer</span>
+                        <span class="tech-pill">Androguard</span>
+                        <span class="tech-pill">JADX</span>
+                        <span class="tech-pill">Wireshark</span>
+                    </div>
+                </div>
+
+                <!-- Category 4: AI & ML Technologies -->
+                <div class="tech-category-card">
+                    <div class="tech-cat-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI & Machine Learning</h3>
+                    </div>
+                    <div class="tech-pill-container">
+                        <span class="tech-pill">Machine Learning</span>
+                        <span class="tech-pill">Deep Learning</span>
+                        <span class="tech-pill">CrewAI</span>
+                        <span class="tech-pill">Gemini AI</span>
+                        <span class="tech-pill">Streamlit</span>
+                    </div>
+                </div>
+
+                <!-- Category 5: Architecture & Tools -->
+                <div class="tech-category-card">
+                    <div class="tech-cat-header">
+                        <i class="fas fa-layer-group"></i>
+                        <h3>Platforms & Databases</h3>
+                    </div>
+                    <div class="tech-pill-container">
+                        <span class="tech-pill">React</span>
+                        <span class="tech-pill">FastAPI</span>
+                        <span class="tech-pill">PostgreSQL</span>
+                        <span class="tech-pill">SQLite</span>
+                        <span class="tech-pill">Power BI</span>
+                        <span class="tech-pill">Git</span>
+                        <span class="tech-pill">n8n</span>
+                    </div>
+                </div>
+
+            </div>
+            
+            <div class="soft-skills-container">
+                <h3>Core Competencies</h3>
+                <div class="soft-skills-row">
+                    <span class="soft-skill-tag"><i class="far fa-lightbulb"></i> Creative Problem Solving</span>
+                    <span class="soft-skill-tag"><i class="fas fa-users"></i> Teamwork & Collaboration</span>
+                    <span class="soft-skill-tag"><i class="far fa-clock"></i> Time Management</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education" class="education-section">
+        <div class="container">
+            <h2 class="section-title"><span class="number">05.</span> Education</h2>
+            <div class="education-timeline-modern">
+                
+                <!-- B.Tech -->
+                <div class="edu-card">
+                    <div class="edu-dot"></div>
+                    <div class="edu-date">2023 - 2027</div>
+                    <div class="edu-content">
+                        <h3>Bachelor of Technology</h3>
+                        <h4>Computer Science and Engineering (Cyber Security)</h4>
+                        <p class="edu-school">Vignan’s Institute of Information Technology (A)</p>
+                        <p class="edu-loc"><i class="fas fa-map-marker-alt"></i> Visakhapatnam, AP</p>
+                        <div class="score-badge">CGPA: 9.56</div>
+                    </div>
+                </div>
+
+                <!-- Intermediate -->
+                <div class="edu-card">
+                    <div class="edu-dot"></div>
+                    <div class="edu-date">2021 - 2023</div>
+                    <div class="edu-content">
+                        <h3>Intermediate (MPC)</h3>
+                        <p class="edu-school">Sri Chaitanya Junior College</p>
+                        <p class="edu-loc"><i class="fas fa-map-marker-alt"></i> Visakhapatnam, AP</p>
+                        <div class="score-badge">Marks: 952/1000 (95.2%)</div>
+                    </div>
+                </div>
+
+                <!-- CBSE -->
+                <div class="edu-card">
+                    <div class="edu-dot"></div>
+                    <div class="edu-date">2020 - 2021</div>
+                    <div class="edu-content">
+                        <h3>Central Board of Secondary Education (CBSE)</h3>
+                        <p class="edu-school">Sri Krishna Vidya Mandir</p>
+                        <p class="edu-loc"><i class="fas fa-map-marker-alt"></i> Visakhapatnam, AP</p>
+                        <div class="score-badge">Marks: 418/500 (83.6%)</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Co-Curricular Section -->
+    <section class="cert-co-section">
+        <div class="container">
+            <div class="cert-co-grid">
+                
+                <!-- Certifications Panel -->
+                <div class="certifications-panel">
+                    <h3 class="panel-heading"><i class="fas fa-award"></i> Professional Certifications</h3>
+                    <div class="cert-list">
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+                            <div class="cert-info">
+                                <h4>Cisco Certified Network Associate (CCNA)</h4>
+                                <p>Issued by: Cisco</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-user-lock"></i></div>
+                            <div class="cert-info">
+                                <h4>Fundamentals of Cybersecurity</h4>
+                                <p>Issued by: Zscaler</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fab fa-python"></i></div>
+                            <div class="cert-info">
+                                <h4>Python Essentials</h4>
+                                <p>Issued by: Cisco</p>
+                            </div>
+                        </div>
+                        <div class="cert-card">
+                            <div class="cert-icon"><i class="fas fa-cloud"></i></div>
+                            <div class="cert-info">
+                                <h4>OCI 2025 Certified AI Foundations Associate</h4>
+                                <p>Issued by: Oracle</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Co-Curricular Panel -->
+                <div class="co-curricular-panel">
+                    <h3 class="panel-heading"><i class="fas fa-users-gear"></i> Co-Curricular Activities</h3>
+                    <div class="co-list">
+                        <div class="co-card">
+                            <div class="co-icon"><i class="fab fa-microsoft"></i></div>
+                            <div class="co-info">
+                                <h4>Power Tools Team Member</h4>
+                                <p>Microsoft Learn Student Community (MLSC-VIIT)</p>
+                                <p class="desc">Delivered hands-on workshops on Excel, Power BI, and MS Word for 100+ students. Collaborated with a 4-member team to organize technical sessions. (Oct 2025 – Present)</p>
+                            </div>
+                        </div>
+                        <div class="co-card">
+                            <div class="co-icon"><i class="fab fa-google"></i></div>
+                            <div class="co-info">
+                                <h4>Hackathon Finalist (Top 13 Teams)</h4>
+                                <p>Google Developer Groups 24-Hour Hackathon</p>
+                                <p class="desc">Advanced to the final round competing against multiple teams in a fast-paced coding sprint.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title"><span class="number">06.</span> Contact Details</h2>
+            
+            <div class="contact-grid">
+                <div class="contact-info-panel">
+                    <h3>Let's collaborate on secure and smart ideas!</h3>
+                    <p>
+                        I'm actively seeking opportunities where I can apply my malware analysis, SOC engineering, and AI automation skills. Reach out via email, phone, or LinkedIn.
+                    </p>
+                    <div class="contact-channels">
+                        <div class="channel-card">
+                            <i class="fas fa-paper-plane"></i>
+                            <div>
+                                <h4>Email</h4>
+                                <a href="mailto:varshiniaanupolu2005@gmail.com">varshiniaanupolu2005@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="channel-card">
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <h4>Phone / WhatsApp</h4>
+                                <a href="tel:+919182424169">+91 9182424169</a>
+                            </div>
+                        </div>
+                        <div class="channel-card">
+                            <i class="fas fa-location-arrow"></i>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Visakhapatnam, AP, India</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form id="portfolioContactForm" onsubmit="event.preventDefault(); alert('Message logged successfully! In a real deployment, this would trigger an email integration.');">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" required placeholder="Name">
+                            </div>
+                            <div class="input-group">
+                                <label for="email">Your Email</label>
+                                <input type="email" id="email" required placeholder="Email">
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" required placeholder="Subject">
+                        </div>
+                        <div class="input-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" rows="5" required placeholder="Write your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block"><i class="fas fa-paper-plane"></i> Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2026 Anupolu Varshini. Designed with professional Cyber-ML theme.</p>
+                <div class="footer-links">
+                    <a href="https://github.com/AVarshini05" target="_blank"><i class="fab fa-github"></i> GitHub</a>
+                    <a href="https://www.linkedin.com/in/varshini-anupolu/" target="_blank"><i class="fab fa-linkedin-in"></i> LinkedIn</a>
+                    <a href="https://leetcode.com/u/Anupolu_Varshini/" target="_blank"><i class="fas fa-code"></i> Leetcode</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification Container -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Script Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
