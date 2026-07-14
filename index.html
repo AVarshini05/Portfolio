@@ -47,6 +47,9 @@
                     <li><a href="#projects" class="nav-link">Projects</a></li>
                     <li><a href="#skills" class="nav-link">Skills</a></li>
                     <li><a href="#education" class="nav-link">Education</a></li>
+                    <li><a href="#badges" class="nav-link">Badges</a></li>
+                    <li><a href="#certifications" class="nav-link">Certificates</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
                     <li><a href="#contact" class="nav-link">Contact</a></li>
                 </ul>
             </nav>
@@ -59,7 +62,7 @@
             <div class="hero-content">
                 <div class="status-pill">
                     <span class="pulse-dot"></span>
-                    <span>Seeking Cybersecurity & AI Opportunities</span>
+                    <span>Seeking AI & Cybersecurity Opportunities</span>
                 </div>
                 <h1 class="hero-title">
                     Hello, I'm <br>
@@ -69,7 +72,7 @@
                     I specialize in <span id="typed-text" class="typed-cursor-parent"></span><span class="typed-cursor">|</span>
                 </h2>
                 <p class="hero-description">
-                    Aspiring Cybersecurity Engineer passionate about building intelligent, secure, and innovative solutions to solve real-world security challenges. Currently pursuing B.Tech in CSE (Cyber Security) at Vignan's Institute.
+                    AI Developer and Cybersecurity Engineer passionate about building secure, intelligent architectures and autonomous SecOps pipelines. Currently pursuing B.Tech in CSE (Cyber Security) at Vignan's Institute.
                 </p>
                 <div class="hero-actions">
                     <a href="#projects" class="btn btn-primary"><i class="fas fa-project-diagram"></i> View Projects</a>
@@ -85,21 +88,21 @@
             
             <div class="hero-visual">
                 <!-- Glowing Cyber Shield/Core HUD -->
-                <div class="hud-container">
+                <div class="hud-container" title="Click to trigger neural discharge wave">
                     <div class="hud-circle ring-outer"></div>
                     <div class="hud-circle ring-middle"></div>
                     <div class="hud-circle ring-inner">
-                        <i class="fas fa-shield-halved core-icon"></i>
+                        <i class="fas fa-brain core-icon"></i>
                     </div>
                     <!-- Stats Tags floating around -->
                     <div class="hud-tag tag-top">
-                        <i class="fas fa-user-shield"></i> SOC Analyst
+                        <i class="fas fa-network-wired"></i> Cognitive SecOps
                     </div>
                     <div class="hud-tag tag-bottom-right">
-                        <i class="fas fa-brain"></i> AI Malware Agent
+                        <i class="fas fa-shield-halved"></i> Threat Intel
                     </div>
                     <div class="hud-tag tag-bottom-left">
-                        <i class="fas fa-search-plus"></i> Forensics
+                        <i class="fas fa-brain"></i> Autonomous Agents
                     </div>
                 </div>
             </div>
@@ -115,19 +118,33 @@
     <!-- About & Interactive Console Section -->
     <section id="about" class="about-section">
         <div class="container">
-            <h2 class="section-title"><span class="number">01.</span> About Me</h2>
+            <h2 class="section-title">About Me</h2>
             <div class="about-grid">
-                <div class="about-text-content">
-                    <p class="lead">
-                        I am an analytical and research-driven Computer Science major specializing in Cyber Security.
-                    </p>
-                    <p>
-                        Through academic excellence at Vignan's Institute, maintaining a <strong class="cyan-accent">CGPA of 9.56</strong>, I have grounded myself in core security concepts, malware reversing, and predictive machine learning architectures.
-                    </p>
-                    <p>
-                        My objective is to construct intelligent pipelines that defend enterprise architectures. I bridge the gap between traditional security operations (like log correlation in Splunk and threat matching in MITRE ATT&CK) and modern AI automation agents (like Gemini and CrewAI pipelines).
-                    </p>
-                    
+                <!-- Column 1: Photo -->
+                <div class="about-column-photo">
+                    <div class="profile-photo-container">
+                        <div class="profile-photo-glow"></div>
+                        <img src="assets/profile.jpg" alt="Varshini Anupolu Profile Photo" class="profile-photo">
+                    </div>
+                </div>
+                
+                <!-- Column 2: About Text -->
+                <div class="about-column-text">
+                    <div class="about-text-content">
+                        <p class="lead">
+                            I am an analytical and research-driven Computer Science major specializing in the convergence of Cyber Security and Artificial Intelligence.
+                        </p>
+                        <p>
+                            Through academic excellence at Vignan's Institute, maintaining a <strong class="cyan-accent">CGPA of 9.56</strong>, I have grounded myself in core security concepts, malware reversing, and predictive machine learning architectures.
+                        </p>
+                        <p>
+                            My objective is to construct intelligent pipelines that defend enterprise architectures. I bridge the gap between traditional security operations (like log correlation in Splunk and threat matching in MITRE ATT&CK) and modern AI automation agents (like Gemini and CrewAI pipelines).
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Column 3: Quick Profile Facts -->
+                <div class="about-column-facts">
                     <div class="quick-facts">
                         <h3>Quick Profile:</h3>
                         <ul class="facts-list">
@@ -138,42 +155,6 @@
                         </ul>
                     </div>
                 </div>
-                
-                <div class="terminal-container">
-                    <div class="terminal-header">
-                        <div class="terminal-buttons">
-                            <span class="t-btn close"></span>
-                            <span class="t-btn minimize"></span>
-                            <span class="t-btn expand"></span>
-                        </div>
-                        <div class="terminal-title">varshini@cyber-core:~</div>
-                        <div class="terminal-status">
-                            <span class="status-indicator online"></span>
-                            <span>SECURE_SESSION_ACTIVE</span>
-                        </div>
-                    </div>
-                    <div class="terminal-tabs">
-                        <button class="t-tab active" data-cmd="profile">profile.sh</button>
-                        <button class="t-tab" data-cmd="system">sysinfo.sh</button>
-                        <button class="t-tab" data-cmd="interests">interests.txt</button>
-                        <button class="t-tab" data-cmd="help">help.log</button>
-                    </div>
-                    <div class="terminal-body" id="terminalOutput">
-                        <div class="terminal-line"><span class="prompt">varshini@cyber-core:~$</span> <span class="command-run">./profile.sh</span></div>
-                        <div class="output-block">
-                            <p class="terminal-green">>>> INITIALIZING SECURITY ANALYST PROFILE...</p>
-                            <p><strong>Name:</strong> Anupolu Varshini</p>
-                            <p><strong>Primary Focus:</strong> Cybersecurity, SOC Operations, Malware analysis, Deep Learning</p>
-                            <p><strong>Experience:</strong> Former Digital Forensics Intern at Cyber Crime Police Station</p>
-                            <p><strong>Core Tech:</strong> Splunk SIEM, YARA rules, Python, React, Gemini AI, PostgreSQL</p>
-                            <p class="terminal-cyan">>>> SECURE INTERN CREDENTIALS VERIFIED.</p>
-                        </div>
-                        <div class="terminal-input-line">
-                            <span class="prompt">varshini@cyber-core:~$</span>
-                            <input type="text" id="terminalCommandLine" placeholder="Type help or click tabs above..." autocomplete="off">
-                        </div>
-                    </div>
-                </div>
             </div>
         </div>
     </section>
@@ -181,7 +162,7 @@
     <!-- Work Experience Section -->
     <section id="experience" class="experience-section">
         <div class="container">
-            <h2 class="section-title"><span class="number">02.</span> Experience & Internships</h2>
+            <h2 class="section-title">Experience & Internships</h2>
             <div class="experience-timeline">
                 
                 <!-- Experience Item 1 -->
@@ -245,7 +226,7 @@
     <!-- Projects Section -->
     <section id="projects" class="projects-section">
         <div class="container">
-            <h2 class="section-title"><span class="number">03.</span> Projects Showcase</h2>
+            <h2 class="section-title">Projects Showcase</h2>
             <p class="section-desc">Selected academic and practical security/AI engineering projects. Click on cards to view detailed tech stacks.</p>
             
             <div class="projects-grid">
@@ -338,7 +319,7 @@
     <!-- Technical Inventory Dashboard (Refactored: COOL, NO SCORES, NO CLUMSY METERS) -->
     <section id="skills" class="skills-section">
         <div class="container">
-            <h2 class="section-title"><span class="number">04.</span> Technical Inventory</h2>
+            <h2 class="section-title">Technical Inventory</h2>
             <p class="section-desc">A specialized set of tools and technologies mapped across cybersecurity and intelligence domains. Hover on cards to highlight skills.</p>
             
             <div class="tech-matrix-grid">
@@ -424,22 +405,13 @@
                 </div>
 
             </div>
-            
-            <div class="soft-skills-container">
-                <h3>Core Competencies</h3>
-                <div class="soft-skills-row">
-                    <span class="soft-skill-tag"><i class="far fa-lightbulb"></i> Creative Problem Solving</span>
-                    <span class="soft-skill-tag"><i class="fas fa-users"></i> Teamwork & Collaboration</span>
-                    <span class="soft-skill-tag"><i class="far fa-clock"></i> Time Management</span>
-                </div>
-            </div>
         </div>
     </section>
 
     <!-- Education Section -->
     <section id="education" class="education-section">
         <div class="container">
-            <h2 class="section-title"><span class="number">05.</span> Education</h2>
+            <h2 class="section-title">Education</h2>
             <div class="education-timeline-modern">
                 
                 <!-- B.Tech -->
@@ -477,75 +449,222 @@
                         <p class="edu-loc"><i class="fas fa-map-marker-alt"></i> Visakhapatnam, AP</p>
                         <div class="score-badge">Marks: 418/500 (83.6%)</div>
                     </div>
+                </div>            </div>
+            
+            <!-- Co-Curricular Activities -->
+            <div class="co-curricular-panel" style="margin-top: 4rem;">
+                <h3 class="panel-heading" style="border-bottom: 1px solid rgba(255, 255, 255, 0.05); padding-bottom: 0.8rem; margin-bottom: 1.5rem;"><i class="fas fa-users-gear"></i> Co-Curricular Activities</h3>
+                <div class="co-list" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1.5rem;">
+                    <div class="co-card">
+                        <div class="co-icon"><i class="fab fa-microsoft"></i></div>
+                        <div class="co-info">
+                            <h4>Power Tools Team Member</h4>
+                            <p>Microsoft Learn Student Community (MLSC-VIIT)</p>
+                            <p class="desc">Designed and conducted practical workshops on Excel, Power BI, and MS Word for 100+ students, enabling participants to build industry-relevant skills in data analytics and office productivity.
+Organized and managed technical learning sessions, collaborating with stakeholders to ensure successful event planning and high-quality training delivery. (Oct 2025 – Present)</p>
+                        </div>
+                    </div>
+                    <div class="co-card">
+                        <div class="co-icon"><i class="fab fa-google"></i></div>
+                        <div class="co-info">
+                            <h4>Hackathon Finalist (Top 13 Teams)</h4>
+                            <p>Google Developer Groups 24-Hour Hackathon</p>
+                            <p class="desc">Advanced to the final round competing against multiple teams in a fast-paced coding sprint.</p>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Certifications & Co-Curricular Section -->
-    <section class="cert-co-section">
+    <!-- Digital Credentials Section -->
+    <section id="badges" class="badges-section">
         <div class="container">
-            <div class="cert-co-grid">
+            <h2 class="section-title">Digital Credentials</h2>
+            <p class="section-desc">Verified learning pathways and certifications issued via Credly. Click on any badge to verify credentials.</p>
+            <div class="badges-grid-container">
+                <!-- Badge 1: CCNA ITN -->
+                <a href="https://www.credly.com/badges/7d55824c-c809-4d62-b439-982ae34133c5" target="_blank" class="badge-item-card" title="Verify CCNA: Introduction to Networks">
+                    <div class="badge-image-wrapper">
+                        <img src="https://images.credly.com/images/70d71df5-f3dc-4380-9b9d-f22513a70417/CCNAITN__1_.png" alt="CCNA: Introduction to Networks">
+                    </div>
+                    <span class="badge-title">CCNA: Intro to Networks</span>
+                    <span class="badge-issuer">Cisco</span>
+                </a>
+                <!-- Badge 2: CCNA ENSA -->
+                <a href="https://www.credly.com/badges/858c4e2a-360f-434e-ae2d-764b52fe5a23" target="_blank" class="badge-item-card" title="Verify CCNA: Enterprise Networking, Security, and Automation">
+                    <div class="badge-image-wrapper">
+                        <img src="https://images.credly.com/images/0a6d331e-8abf-4272-a949-33f754569a76/CCNAENSA__1_.png" alt="CCNA: Enterprise Networking, Security, and Automation">
+                    </div>
+                    <span class="badge-title">CCNA: Enterprise Sec & Auto</span>
+                    <span class="badge-issuer">Cisco</span>
+                </a>
+
+                <!-- Badge 4: Multicloud Network Associate -->
+                <a href="https://www.credly.com/badges/61bd85fb-aede-4639-8886-f26b07a252a5" target="_blank" class="badge-item-card" title="Verify Multicloud Network Associate">
+                    <div class="badge-image-wrapper">
+                        <img src="https://images.credly.com/images/e3c001fd-161d-433a-a7a4-049556d6112d/blob" alt="Multicloud Network Associate">
+                    </div>
+                    <span class="badge-title">Multicloud Net Associate</span>
+                    <span class="badge-issuer">Aviatrix</span>
+                </a>
+                <!-- Badge 5: Apply AI -->
+                <a href="https://www.credly.com/badges/2d7ba94c-9f84-4dc6-9d1a-b42dea43c9a4" target="_blank" class="badge-item-card" title="Verify Apply AI: Analyze Customer Reviews">
+                    <div class="badge-image-wrapper">
+                        <img src="https://images.credly.com/images/32aad19b-a359-48f5-a332-2cd9ac2b8731/blob" alt="Apply AI: Analyze Customer Reviews">
+                    </div>
+                    <span class="badge-title">Apply AI: Cust Reviews</span>
+                    <span class="badge-issuer">Cisco</span>
+                </a>
+                <!-- Badge 6: Intro to Modern AI -->
+                <a href="https://www.credly.com/badges/4772c9e8-191f-41c9-838b-493a18283280" target="_blank" class="badge-item-card" title="Verify Introduction to Modern AI">
+                    <div class="badge-image-wrapper">
+                        <img src="https://images.credly.com/images/e2d12302-10f9-40d4-8ff1-066a7008b61d/blob" alt="Introduction to Modern AI">
+                    </div>
+                    <span class="badge-title">Intro to Modern AI</span>
+                    <span class="badge-issuer">Cisco</span>
+                </a>
+                <!-- Badge 7: Python Essentials 1 -->
+                <a href="https://www.credly.com/badges/dd913968-1a17-4a18-9a36-58322053068d" target="_blank" class="badge-item-card" title="Verify Python Essentials 1">
+                    <div class="badge-image-wrapper">
+                        <img src="https://images.credly.com/images/68c0b94d-f6ac-40b1-a0e0-921439eb092e/image.png" alt="Python Essentials 1">
+                    </div>
+                    <span class="badge-title">Python Essentials 1</span>
+                    <span class="badge-issuer">Cisco</span>
+                </a>
+                <!-- Badge 8: Python Essentials 2 -->
+                <a href="https://www.credly.com/badges/7e9f064f-b1cb-43c5-9e78-bdcb7e88d652" target="_blank" class="badge-item-card" title="Verify Python Essentials 2">
+                    <div class="badge-image-wrapper">
+                        <img src="https://images.credly.com/images/3f802526-7274-4230-91ab-f6d1a35340e6/image.png" alt="Python Essentials 2">
+                    </div>
+                    <span class="badge-title">Python Essentials 2</span>
+                    <span class="badge-issuer">Cisco</span>
+                </a>
+                <!-- Badge 9: JavaScript Essentials 1 -->
+                <a href="https://www.credly.com/badges/4efc75c8-6b2f-4936-8e47-f68c8faa13aa" target="_blank" class="badge-item-card" title="Verify JavaScript Essentials 1">
+                    <div class="badge-image-wrapper">
+                        <img src="https://images.credly.com/images/b93bf373-3da6-4ada-9879-a0c39d6a11f8/image.png" alt="JavaScript Essentials 1">
+                    </div>
+                    <span class="badge-title">JavaScript Essentials 1</span>
+                    <span class="badge-issuer">Cisco</span>
+                </a>
+                <!-- Badge 10: HTML Essentials -->
+                <a href="https://www.credly.com/badges/aff8c072-89e6-43bb-9210-683413b99f9d" target="_blank" class="badge-item-card" title="Verify HTML Essentials">
+                    <div class="badge-image-wrapper">
+                        <img src="https://images.credly.com/images/b1c17d0c-e76b-45fc-9b28-87b01ae1caf3/blob" alt="HTML Essentials">
+                    </div>
+                    <span class="badge-title">HTML Essentials</span>
+                    <span class="badge-issuer">Cisco</span>
+                </a>
+                <!-- Badge 11: CSS Essentials -->
+                <a href="https://www.credly.com/badges/c26e1352-4217-4b01-afde-d4ec5961fbae" target="_blank" class="badge-item-card" title="Verify CSS Essentials">
+                    <div class="badge-image-wrapper">
+                        <img src="https://images.credly.com/images/bd2bba36-66ad-4de2-9d91-e29433e51a16/blob" alt="CSS Essentials">
+                    </div>
+                    <span class="badge-title">CSS Essentials</span>
+                    <span class="badge-issuer">Cisco</span>
+                </a>
+                <!-- Badge 12: Intro to Data Science -->
+                <a href="https://www.credly.com/badges/ff38912c-af79-4dba-a849-8dfe6bf4c5aa" target="_blank" class="badge-item-card" title="Verify Introduction to Data Science">
+                    <div class="badge-image-wrapper">
+                        <img src="https://images.credly.com/images/b38a42e0-dc58-4ce2-b6c0-28d978e8aaad/image.png" alt="Introduction to Data Science">
+                    </div>
+                    <span class="badge-title">Intro to Data Science</span>
+                    <span class="badge-issuer">Cisco</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Professional Certifications Gallery (3D Fan Deck) -->
+    <section id="certifications" class="cert-co-section">
+        <div class="container">
+            <h2 class="section-title">Certificate Archives</h2>
+            <p class="section-desc">A curated collection of verified professional certifications and course completions in software development and security.</p>
+            
+            <div class="deck-container-wrapper">
+                <div class="deck-info-block">
+                    <h3>Academic & Professional Credentials</h3>
+                    <p>Click on any certificate in the stack to open the document viewer and inspect verification details.</p>
+                    <div class="deck-controls">
+                        <button class="btn btn-secondary" id="prevDeckCard"><i class="fas fa-chevron-left"></i> Prev</button>
+                        <button class="btn btn-primary" id="nextDeckCard">Next <i class="fas fa-chevron-right"></i></button>
+                    </div>
+                </div>
                 
-                <!-- Certifications Panel -->
-                <div class="certifications-panel">
-                    <h3 class="panel-heading"><i class="fas fa-award"></i> Professional Certifications</h3>
-                    <div class="cert-list">
-                        <div class="cert-card">
-                            <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
-                            <div class="cert-info">
-                                <h4>Cisco Certified Network Associate (CCNA)</h4>
-                                <p>Issued by: Cisco</p>
-                            </div>
-                        </div>
-                        <div class="cert-card">
-                            <div class="cert-icon"><i class="fas fa-user-lock"></i></div>
-                            <div class="cert-info">
-                                <h4>Fundamentals of Cybersecurity</h4>
-                                <p>Issued by: Zscaler</p>
-                            </div>
-                        </div>
-                        <div class="cert-card">
-                            <div class="cert-icon"><i class="fab fa-python"></i></div>
-                            <div class="cert-info">
-                                <h4>Python Essentials</h4>
-                                <p>Issued by: Cisco</p>
-                            </div>
-                        </div>
-                        <div class="cert-card">
-                            <div class="cert-icon"><i class="fas fa-cloud"></i></div>
-                            <div class="cert-info">
-                                <h4>OCI 2025 Certified AI Foundations Associate</h4>
-                                <p>Issued by: Oracle</p>
-                            </div>
-                        </div>
+                <div class="card-fan-deck" id="certFanDeck">
+                    <!-- Certificate 1 -->
+                    <div class="deck-card active" data-index="0" data-img="assets/html-cert.jpg" data-title="Introduction to HTML" data-org="SoloLearn">
+                        <div class="card-inner-glow"></div>
+                        <img src="assets/html-cert.jpg" alt="SoloLearn HTML Certificate">
+                        <div class="card-badge-label">SoloLearn</div>
+                    </div>
+                    <!-- Certificate 2 -->
+                    <div class="deck-card" data-index="1" data-img="assets/python-cert.jpg" data-title="Python for Beginners" data-org="Simplilearn">
+                        <div class="card-inner-glow"></div>
+                        <img src="assets/python-cert.jpg" alt="Simplilearn Python Certificate">
+                        <div class="card-badge-label">Simplilearn</div>
+                    </div>
+                    <!-- Certificate 3 -->
+                    <div class="deck-card" data-index="2" data-img="assets/c-cert.jpg" data-title="C Programming Basics" data-org="Simplilearn">
+                        <div class="card-inner-glow"></div>
+                        <img src="assets/c-cert.jpg" alt="Simplilearn C Programming Certificate">
+                        <div class="card-badge-label">Simplilearn</div>
+                    </div>
+                    <!-- Certificate 4 -->
+                    <div class="deck-card" data-index="3" data-img="assets/datastructures-cert.jpg" data-title="Data Structures" data-org="Infosys Springboard">
+                        <div class="card-inner-glow"></div>
+                        <img src="assets/datastructures-cert.jpg" alt="Infosys Data Structures Certificate">
+                        <div class="card-badge-label">Infosys</div>
+                    </div>
+                    <!-- Certificate 5 -->
+                    <div class="deck-card" data-index="4" data-img="assets/zscaler-cert.jpg" data-title="Zero Trust Cloud Security" data-org="AICTE Virtual Internship (Zscaler)">
+                        <div class="card-inner-glow"></div>
+                        <img src="assets/zscaler-cert.jpg" alt="Zscaler Cloud Security Certificate">
+                        <div class="card-badge-label">Zscaler</div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <!-- Co-Curricular Panel -->
-                <div class="co-curricular-panel">
-                    <h3 class="panel-heading"><i class="fas fa-users-gear"></i> Co-Curricular Activities</h3>
-                    <div class="co-list">
-                        <div class="co-card">
-                            <div class="co-icon"><i class="fab fa-microsoft"></i></div>
-                            <div class="co-info">
-                                <h4>Power Tools Team Member</h4>
-                                <p>Microsoft Learn Student Community (MLSC-VIIT)</p>
-                                <p class="desc">Delivered hands-on workshops on Excel, Power BI, and MS Word for 100+ students. Collaborated with a 4-member team to organize technical sessions. (Oct 2025 – Present)</p>
-                            </div>
-                        </div>
-                        <div class="co-card">
-                            <div class="co-icon"><i class="fab fa-google"></i></div>
-                            <div class="co-info">
-                                <h4>Hackathon Finalist (Top 13 Teams)</h4>
-                                <p>Google Developer Groups 24-Hour Hackathon</p>
-                                <p class="desc">Advanced to the final round competing against multiple teams in a fast-paced coding sprint.</p>
-                            </div>
-                        </div>
+    <!-- 3D Coverflow Photo Gallery Section -->
+    <section id="gallery" class="gallery-section-3d">
+        <div class="container">
+            <h2 class="section-title">Active Gallery</h2>
+            <p class="section-desc">Moments from hackathons, hands-on digital forensics laboratory sessions, and academic projects.</p>
+            
+            <div class="coverflow-container">
+                <div class="coverflow-carousel" id="photoCoverflow">
+                    <div class="coverflow-slide active" data-index="0">
+                        <img src="assets/gallery-mlsc-launch.jpg" alt="Microsoft Learn Student Community Launch Banner">
+                        <div class="slide-caption">Microsoft Learn Student Community Launch</div>
+                    </div>
+                    <div class="coverflow-slide" data-index="1">
+                        <img src="assets/gallery-mlsc-group.jpg" alt="Microsoft Learn Student Community Core Team Group Photo">
+                        <div class="slide-caption">MLSC VIIT Student Community Core Team</div>
+                    </div>
+                    <div class="coverflow-slide" data-index="2">
+                        <img src="assets/gallery-varshini-mlsc.jpg" alt="Varshini A - Power Tools Team Lead Poster">
+                        <div class="slide-caption">MLSC VIIT Power Tools Team Lead - Varshini A</div>
+                    </div>
+                    <div class="coverflow-slide" data-index="3">
+                        <img src="assets/gallery-hackverse-collage.jpg" alt="Hackverse Hackathon Memories Collage">
+                        <div class="slide-caption">Hackverse Hackathon Memories</div>
+                    </div>
+                    <div class="coverflow-slide" data-index="4">
+                        <img src="assets/gallery-hackverse-frame.jpg" alt="Hackverse Hackathon Participation Photo">
+                        <div class="slide-caption">Hackverse Hackathon Participation</div>
                     </div>
                 </div>
-
+                
+                <div class="coverflow-dots" id="coverflowDots">
+                    <span class="c-dot active" data-index="0"></span>
+                    <span class="c-dot" data-index="1"></span>
+                    <span class="c-dot" data-index="2"></span>
+                    <span class="c-dot" data-index="3"></span>
+                    <span class="c-dot" data-index="4"></span>
+                </div>
             </div>
         </div>
     </section>
@@ -553,7 +672,7 @@
     <!-- Contact Section -->
     <section id="contact" class="contact-section">
         <div class="container">
-            <h2 class="section-title"><span class="number">06.</span> Contact Details</h2>
+            <h2 class="section-title">Contact Details</h2>
             
             <div class="contact-grid">
                 <div class="contact-info-panel">
@@ -587,7 +706,7 @@
                 </div>
 
                 <div class="contact-form-container">
-                    <form id="portfolioContactForm" onsubmit="event.preventDefault(); alert('Message logged successfully! In a real deployment, this would trigger an email integration.');">
+                    <form id="portfolioContactForm">
                         <div class="form-row">
                             <div class="input-group">
                                 <label for="name">Your Name</label>
@@ -626,6 +745,45 @@
             </div>
         </div>
     </footer>
+
+    <!-- Glowing Bottom Navigation Dock -->
+    <div class="bottom-dock-nav">
+        <div class="dock-container">
+            <a href="#home" class="dock-item active" title="Home"><i class="fas fa-house"></i></a>
+            <a href="#about" class="dock-item" title="About"><i class="fas fa-user"></i></a>
+            <a href="#experience" class="dock-item" title="Experience"><i class="fas fa-briefcase"></i></a>
+            <a href="#projects" class="dock-item" title="Projects"><i class="fas fa-project-diagram"></i></a>
+            <a href="#skills" class="dock-item" title="Skills"><i class="fas fa-screwdriver-wrench"></i></a>
+            <a href="#education" class="dock-item" title="Education"><i class="fas fa-graduation-cap"></i></a>
+            <a href="#badges" class="dock-item" title="Badges"><i class="fas fa-id-card"></i></a>
+            <a href="#certifications" class="dock-item" title="Certificates"><i class="fas fa-award"></i></a>
+            <a href="#gallery" class="dock-item" title="Gallery"><i class="fas fa-images"></i></a>
+            <a href="#contact" class="dock-item" title="Contact"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+
+    <!-- Certificate Viewer Modal -->
+    <div class="secure-modal" id="secureCertModal">
+        <div class="modal-overlay"></div>
+        <div class="modal-window-glass">
+            <div class="modal-header">
+                <div class="modal-title-telemetry">
+                    <i class="fas fa-award cyan-accent"></i>
+                    <span id="modalCertTitle">Certificate Viewer</span>
+                </div>
+                <button class="modal-close-btn" id="closeCertModal">&times;</button>
+            </div>
+            <div class="modal-body-content">
+                <div class="modal-img-container">
+                    <img id="modalCertImg" src="" alt="Certificate Document Preview">
+                </div>
+                <div class="modal-meta-bar">
+                    <span id="modalCertOrg">Verified Credential Document</span>
+                    <span class="status-indicator online"></span>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- Toast Notification Container -->
     <div id="toast-container" class="toast-container"></div>
