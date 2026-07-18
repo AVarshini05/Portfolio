@@ -2644,41 +2644,41 @@ a {
     }
 }
 
-/* Compact Flat Grid Credentials Styling */
+/* Compact Flat Grid Credentials Styling - 6 Columns */
 .badges-grid-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
-    gap: 1.5rem;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 1.25rem;
     margin-top: 2rem;
 }
 
 .badge-item-card {
-    background: var(--bg-card);
+    background: rgba(15, 23, 42, 0.35);
     border: 1px solid var(--border-color);
-    border-radius: 12px;
-    padding: 1.5rem 1rem;
+    border-radius: 10px;
+    padding: 1.25rem 0.75rem;
     text-align: center;
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     transition: var(--transition-smooth);
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.75rem;
+    gap: 0.6rem;
     text-decoration: none;
-    position: relative;
-    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 .badge-item-card:hover {
     border-color: var(--cyan-accent);
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(6, 182, 212, 0.15);
+    box-shadow: 0 8px 25px rgba(6, 182, 212, 0.15);
+    background: rgba(15, 23, 42, 0.6);
 }
 
 .badge-image-wrapper {
-    width: 75px;
-    height: 75px;
+    width: 65px;
+    height: 65px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2692,35 +2692,33 @@ a {
 }
 
 .badge-title {
-    font-size: 0.78rem;
+    font-size: 0.75rem;
     font-weight: 700;
     color: var(--text-main);
-    line-height: 1.35;
+    line-height: 1.3;
 }
 
 .badge-issuer {
-    font-size: 0.65rem;
+    font-size: 0.62rem;
     color: var(--text-muted);
 }
 
-.badge-category-tag {
-    font-family: var(--font-mono);
-    font-size: 0.55rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    padding: 0.2rem 0.5rem;
-    border-radius: 4px;
-    background: rgba(255, 255, 255, 0.03);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    color: var(--text-muted);
-    transition: var(--transition-smooth);
+/* Responsiveness for grid columns */
+@media (max-width: 1200px) {
+    .badges-grid-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
 
-/* Category hover color accents */
-.badge-item-card:hover .badge-category-tag.ccna { color: var(--cyan-accent); border-color: rgba(6, 182, 212, 0.3); background: rgba(6, 182, 212, 0.05); }
-.badge-item-card:hover .badge-category-tag.python { color: #306998; border-color: rgba(48, 105, 152, 0.3); background: rgba(48, 105, 152, 0.05); }
-.badge-item-card:hover .badge-category-tag.web { color: #f0db4f; border-color: rgba(240, 219, 79, 0.3); background: rgba(240, 219, 79, 0.05); }
-.badge-item-card:hover .badge-category-tag.ai { color: var(--purple-accent); border-color: rgba(139, 92, 246, 0.3); background: rgba(139, 92, 246, 0.05); }
-.badge-item-card:hover .badge-category-tag.aviatrix { color: #ff5a00; border-color: rgba(255, 90, 0, 0.3); background: rgba(255, 90, 0, 0.05); }
-.badge-item-card:hover .badge-category-tag.ds { color: #0073b1; border-color: rgba(0, 115, 177, 0.3); background: rgba(0, 115, 177, 0.05); }
+@media (max-width: 900px) {
+    .badges-grid-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .badges-grid-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
