@@ -22,9 +22,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 9. 3D Coverflow Photo Gallery Carousel
     initCoverflowGallery();
-
-    // 10. Bottom Floating Pill Dock Active Scroll Spy
-    initBottomDockSpy();
 });
 
 // ==========================================
@@ -636,11 +633,29 @@ function initCoverflowGallery() {
         });
     }
 
+    // Auto shift every 10 seconds
+    let autoShiftInterval = setInterval(nextSlide, 10000);
+
+    function nextSlide() {
+        if (currentIndex < slides.length - 1) {
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+        renderCoverflow();
+    }
+
+    function resetAutoShift() {
+        clearInterval(autoShiftInterval);
+        autoShiftInterval = setInterval(nextSlide, 10000);
+    }
+
     // Dots navigation hook
     dots.forEach(dot => {
         dot.addEventListener('click', () => {
             currentIndex = parseInt(dot.getAttribute('data-index'), 10);
             renderCoverflow();
+            resetAutoShift();
         });
     });
 
@@ -650,6 +665,7 @@ function initCoverflowGallery() {
             if (idx !== currentIndex) {
                 currentIndex = idx;
                 renderCoverflow();
+                resetAutoShift();
             }
         });
     });
@@ -670,9 +686,11 @@ function initCoverflowGallery() {
             if (diffX > 0 && currentIndex > 0) {
                 currentIndex--;
                 renderCoverflow();
+                resetAutoShift();
             } else if (diffX < 0 && currentIndex < slides.length - 1) {
                 currentIndex++;
                 renderCoverflow();
+                resetAutoShift();
             }
             isDragging = false; // block multiple shifts in single gesture
         }
@@ -683,48 +701,4 @@ function initCoverflowGallery() {
     });
 }
 
-// ==========================================
-// 10. Bottom Floating Pill Dock Active Scroll Spy
-// ==========================================
-function initBottomDockSpy() {
-    const dock = document.querySelector('.bottom-dock-nav');
-    const sections = document.querySelectorAll('section');
-    const dockItems = document.querySelectorAll('.dock-item');
 
-    if (!dock) return;
-
-    // Show floating dock only when user scrolls past 300px from top
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 300) {
-            dock.classList.add('visible');
-        } else {
-            dock.classList.remove('visible');
-        }
-    });
-
-    // Highlight dock items dynamically on scroll
-    const spyOptions = {
-        root: null,
-        rootMargin: '-20% 0px -60% 0px', // focused viewport zone
-        threshold: 0
-    };
-
-    const spyObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                const sectionId = entry.target.getAttribute('id');
-                dockItems.forEach(item => {
-                    if (item.getAttribute('href') === `#${sectionId}`) {
-                        item.classList.add('active');
-                    } else {
-                        item.classList.remove('active');
-                    }
-                });
-            }
-        });
-    }, spyOptions);
-
-    sections.forEach(section => {
-        spyObserver.observe(section);
-    });
-}
