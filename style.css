@@ -224,33 +224,52 @@ a {
 
 .nav-link {
     font-family: var(--font-heading);
-    font-size: 0.85rem;
+    font-size: 1.15rem;
     font-weight: 500;
-    letter-spacing: 1px;
-    text-transform: uppercase;
     color: var(--text-muted);
     position: relative;
-    padding: 0.4rem 0;
+    padding: 0.4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
 }
 
 .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    background-color: var(--cyan-accent);
-    transition: var(--transition-smooth);
-    box-shadow: var(--neon-shadow-cyan);
+    display: none;
 }
 
 .nav-link:hover, .nav-link.active {
     color: var(--cyan-accent);
 }
 
-.nav-link:hover::after, .nav-link.active::after {
-    width: 100%;
+/* Custom Tooltip popup for Top Navbar */
+.nav-tooltip {
+    position: absolute;
+    top: calc(100% + 12px);
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: rgba(10, 15, 29, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-main);
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.nav-link:hover .nav-tooltip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
 }
 
 .nav-toggle {
@@ -1749,6 +1768,31 @@ a {
         gap: 2rem;
     }
     
+    .nav-link {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.25rem;
+        width: auto;
+        height: auto;
+    }
+    
+    .nav-tooltip {
+        position: static;
+        opacity: 1;
+        pointer-events: auto;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        transform: none;
+        color: inherit;
+        font-size: 1.1rem;
+        font-family: inherit;
+        text-transform: capitalize;
+        letter-spacing: normal;
+    }
+    
     .nav-toggle.active span:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
     }
@@ -2142,6 +2186,35 @@ a {
     position: relative;
 }
 
+.dock-item::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 58px;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: rgba(10, 15, 29, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: var(--text-main);
+    padding: 0.35rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.7rem;
+    font-family: var(--font-heading);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    z-index: 100;
+}
+
+.dock-item:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
 .dock-item::before {
     content: '';
     position: absolute;
@@ -2376,3 +2449,90 @@ a {
     }
 }
 
+/* Grouped Credentials Cards */
+.badges-groups-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    .badges-groups-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.badge-group-card {
+    background: rgba(15, 23, 42, 0.4);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 1.75rem;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transition: var(--transition-smooth);
+}
+
+.badge-group-card:hover {
+    border-color: rgba(6, 182, 212, 0.15);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.4), 0 0 20px rgba(6, 182, 212, 0.03);
+}
+
+.badge-group-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    padding-bottom: 0.6rem;
+}
+
+.badge-group-header i {
+    font-size: 1.25rem;
+    color: var(--cyan-accent);
+}
+
+.badge-group-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-main);
+    letter-spacing: 0.5px;
+}
+
+.badge-group-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+    gap: 1rem;
+}
+
+/* Override .badge-item-card styles for nested cards */
+.badge-group-grid .badge-item-card {
+    padding: 1rem 0.75rem;
+    gap: 0.6rem;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.03);
+    background: rgba(255, 255, 255, 0.015);
+}
+
+.badge-group-grid .badge-item-card:hover {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: var(--cyan-accent);
+}
+
+.badge-group-grid .badge-image-wrapper {
+    width: 65px;
+    height: 65px;
+}
+
+.badge-group-grid .badge-title {
+    font-size: 0.75rem;
+    line-height: 1.25;
+}
+
+.badge-group-grid .badge-issuer {
+    font-size: 0.6rem;
+}
